@@ -20,6 +20,10 @@ class Tanggal {
     }
 
     public static function toReadableDate($date, $withSpan=TRUE, $forceDate=FALSE){
+        if($date == null){
+            return "-";
+        }
+
         if($forceDate){
             $date = date("Y-m-d", strtotime($date));
         }
